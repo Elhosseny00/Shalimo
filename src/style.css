@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+:root {
+  --OrangeColor: #fcd60f;
+  --greenColor: #438219;
+  --BlackColor: #17181d;
+  --whiteColor: #f5f5f1;
+}
+
+.main {
+  background: linear-gradient(to right, #438219 70%, #fcd60f 30%);
+  height: 80vh;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+nav ul li a {
+  color: var(--OrangeColor);
+  font-size: 16px;
+  font-weight: bold;
+
+  padding: 6px 20px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+nav ul li a:hover {
+  background-color: #fcd60f;
+  color: #438219;
+}
+nav ul li a.active {
+  background-color: #fcd60f;
+  color: #438219;
+}
+.cart {
+  position: absolute;
+  height: 100%;
+  background-color: var(--whiteColor);
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+.cart.active {
+  transform: translateX(0);
+}
+.responsive-btn.burger .btn-line:nth-child(1) {
+  transform: translate(-8px, 8px) rotate(45deg);
+  -webkit-transform: translate(-8px, 8px) rotate(45deg);
+  -moz-transform: translate(-8px, 8px) rotate(45deg);
+  -ms-transform: translate(-8px, 8px) rotate(45deg);
+  -o-transform: translate(-8px, 8px) rotate(45deg);
+}
+
+.responsive-btn.burger .btn-line:nth-child(2) {
+  transform: translateX(12px);
+  -webkit-transform: translateX(12px);
+  -moz-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  -o-transform: translateX(12px);
+  opacity: 0;
+}
+
+.responsive-btn.burger .btn-line:nth-child(3) {
+  transform: translate(-8px, -8px) rotate(-45deg);
+  -webkit-transform: translate(-8px, -8px) rotate(-45deg);
+  -moz-transform: translate(-8px, -8px) rotate(-45deg);
+  -ms-transform: translate(-8px, -8px) rotate(-45deg);
+  -o-transform: translate(-8px, -8px) rotate(-45deg);
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--greenColor),
+      var(--OrangeColor)
+    );
+    width: 100%;
+
+    height: 0;
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+  }
+  nav.open {
+    height: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+  }
+  nav.open ul {
+    opacity: 1;
+    transition: opacity 0.5s 0.2s ease-in;
+  }
+  nav ul li a {
+    color: var(--whiteColor);
+    font-size: 50px;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+  }
+  nav ul li a:hover {
+    background-color: #fcd60f;
+    color: #438219;
+  }
+  nav ul li a.active {
+    background-color: #fcd60f;
+    color: #438219;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--greenColor),
+      var(--OrangeColor)
+    );
+    width: 100%;
+
+    height: 0;
+    transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+  }
+  nav.open {
+    height: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+  }
+  nav.open ul {
+    opacity: 1;
+    transition: opacity 0.5s 0.2s ease-in;
+  }
+  nav ul li a {
+    color: var(--whiteColor);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+  }
+  nav ul li a:hover {
+    background-color: #fcd60f;
+    color: #438219;
+  }
+  nav ul li a.active {
+    background-color: #fcd60f;
+    color: #438219;
+  }
+}
+.product-info {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product-info .image-cover {
+  width: calc(30% - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.product-info .image-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer {
+  .container {
+    @apply px-[30px] mx-auto;
+  }
+
+  .element-center {
+    @apply flex justify-center items-center;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+body {
+  font-family: "Parkinsans", sans-serif;
+}
